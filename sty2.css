@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    background: linear-gradient(129.96deg, #FF2F2F 10.43%, #000460 92.78%), radial-gradient(100% 246.94% at 100% 0%, #FFFFFF 0%, #020063 100%), linear-gradient(121.18deg, #1400FF 0.45%, #3A0000 100%), linear-gradient(154.03deg, #FF002E 0%, #FF003D 74.04%), linear-gradient(341.1deg, #B25BBA 7.52%, #1700A7 77.98%), linear-gradient(222.34deg, #0047FF 12.99%, #FF0000 87.21%), linear-gradient(150.76deg, #B7D500 15.35%, #2200AA 89.57%);
+background-blend-mode: overlay, color-burn, screen, overlay, difference, difference, normal;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+justify-content: center;
+}
+.wrapper{
+    width: 450px;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0,0.1);
+    border-radius: 2px;
+}
+.wrapper .input-data{
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid silver;
+    font-size: 17px;
+}
+.input-data input:focus ~ label,.input-data input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #4158d0;
+}
+.wrapper .input-data label{
+    position: absolute;
+    bottom : 10px;
+    left: 0;
+    color: #333;
+    pointer-events: none;
+    transition: all 0.3s ease-in;
+}
+.wrapper .input-data .underline{
+    position : absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+.input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #4158d0;
+    transform: scaleX(0);
+    transition: transform 0.3 ease;
+}
+.input-data input:focus ~ .underline:before,
+.input:valid ~ .underline:before{
+    transform: scaleX(1);
+}
+.enter-icon{
+    float: right;
+    position: absolute;
+    top: -25%;
+    left: 87%;
+    margin-bottom: 5px
+}
